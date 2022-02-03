@@ -169,4 +169,29 @@ section {
     font-size: 1rem;
   }
 }
- 
+
+
+.invite {
+ overflow-wrap: break-word;
+ word-wrap: break-word;
+ word-break: break-word;
+ text-align: left;
+ color: white;
+ font-size: 16px;
+}
+.invites a {
+ color: white;
+}
+.invites {
+}
+
+.hidden {
+  display: none !important;
+}
+.loading {
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 15px;
+  background: rgba(255,255,255,0.1);
+  margin-top: 20px;
+  border-radius: 50px;

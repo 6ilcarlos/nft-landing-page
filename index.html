@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CodeCats</title>
+    <title>Compra tu Oxxo</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/f0js@0.0.12/dist/f0.js"></script>
+    <script src="minter.js"></script>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png">
@@ -43,9 +45,6 @@
           >
             <img src="images/header/opensea.webp" alt="Opensea" />
           </a>
-          <button class="wallet-btn btn" id="connectWallet">
-            <span>Connect Wallet</span>
-          </button>
         </div>
       </div>
     </header>
@@ -78,8 +77,36 @@
           </li>
         </ul>
         <h1>NFT Drop Coming Soon!!</h1>
-               
-        <p>A new batch of cute cats will be available very soon!</p>
+
+        <div class='minter'>
+            <select id='count'>
+              <option value="" selected disabled hidden>Select mint count</option>
+              {{#each items}}
+              <option value={{count}}>{{count}}</option>
+              {{/each}}
+            </select>
+            <button id='mint' class="hero-btn btn">Mint</button>
+          </div>
+          <div class='console'></div>
+          <div class='loading hidden'>
+            <i class="fa-solid fa-chevron-up fa-flip"></i> minting...
+          </div>
+        </script>
+        <script id="mint-template" type="text/x-handlebars-template">
+        <table class='table'>
+        <tr>
+          <th><img src="opensea.png"></th>
+          <th><img src="rarible.png"></th>
+        </tr>
+        {{#each items}}
+        <tr>
+          <td><a class='token' target="_blank" href="{{opensea}}">token #{{tokenId}}</a></td>
+          <td><a class='token' target="_blank" href="{{rarible}}">token #{{tokenId}}</a></td>
+        </tr>
+        {{/each}}
+        </table>
+        </script>
+
         <a href="https://discord.gg/A9CnsVzzkZ" target="_blank" rel="noopener noreferrer" class="hero-btn btn"
           ><span>Join the Catmmunity</span>
         </a>
@@ -88,5 +115,14 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@metamask/onboarding@1.0.1/dist/metamask-onboarding.bundle.js"></script>
     <script src="app.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="https://unpkg.com/nice-select2@1.0.0/dist/js/nice-select2.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+<link href="https://unpkg.com/nice-select2@1.0.0/dist/css/nice-select2.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+<script src="https://unpkg.com/f0js@0.0.12/dist/f0.js"></script>
+
   </body>
 </html>
