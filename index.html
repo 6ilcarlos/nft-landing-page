@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Compra tu Oxxo</title>
+    <title>Fondo Ethereum - Astucia Empresarial</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/f0js@0.0.12/dist/f0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+   
+    <!-- <script id="mint-template" type="text/x-handlebars-template">
+      <table class='table'>
+      <tr>
+        <th><img src="opensea.png"></th>
+        <th><img src="rarible.png"></th>
+      </tr>
+      {{#each items}}
+      <tr>
+        <td><a class='token' target="_blank" href="{{opensea}}">token #{{tokenId}}</a></td>
+        <td><a class='token' target="_blank" href="{{rarible}}">token #{{tokenId}}</a></td>
+      </tr>
+      {{/each}}
+      </table>
+    </script> -->
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/shop-icon_34368-512.png">
@@ -52,7 +68,7 @@
 
     <section class="container">
       <div class="countdown">
-        <ul
+        <!-- <ul
           id="countdown"
           class="count-down"
           data-date="Feb 17, 2022 4:00:00 PM UTC"
@@ -76,12 +92,15 @@
             <span class="count-number seconds">20</span>
             <p class="count-text">Seg</p>
           </li>
-        </ul>
-        <h1>TU OXXO</h1>
+        </ul> -->
+        <h1>Nodo Astucia Empresarial</h1>
 
         <div>
-          <button id='mint' class="hero-btn btn">Mint</button>
-          <pre></pre>
+          <a href="mint.html">
+          <button class="hero-btn btn" >Depositar</button>
+          </a>
+          <!-- <pre></pre>
+          <div class='console'></div> -->
         </div>
       </div>
     </section>
